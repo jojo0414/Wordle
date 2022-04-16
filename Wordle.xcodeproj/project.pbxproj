@@ -11,6 +11,12 @@
 		C8DDEEA1280A59A3006AE665 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEA0280A59A3006AE665 /* ContentView.swift */; };
 		C8DDEEA3280A59A7006AE665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DDEEA2280A59A7006AE665 /* Assets.xcassets */; };
 		C8DDEEA6280A59A7006AE665 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DDEEA5280A59A7006AE665 /* Preview Assets.xcassets */; };
+		C8DDEEAE280A5F82006AE665 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEAD280A5F82006AE665 /* KeyboardView.swift */; };
+		C8DDEEB0280A61A2006AE665 /* KeyboardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEAF280A61A2006AE665 /* KeyboardButtonView.swift */; };
+		C8DDEEB2280A6445006AE665 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEB1280A6445006AE665 /* GameView.swift */; };
+		C8DDEEB4280A680E006AE665 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8DDEEB3280A680E006AE665 /* PressStart2P-Regular.ttf */; };
+		C8DDEEBA280A7A8E006AE665 /* wordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEB9280A7A8E006AE665 /* wordModel.swift */; };
+		C8DDEEBC280A905B006AE665 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEBB280A905B006AE665 /* GuessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,13 @@
 		C8DDEEA0280A59A3006AE665 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C8DDEEA2280A59A7006AE665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8DDEEA5280A59A7006AE665 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8DDEEAD280A5F82006AE665 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		C8DDEEAF280A61A2006AE665 /* KeyboardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButtonView.swift; sourceTree = "<group>"; };
+		C8DDEEB1280A6445006AE665 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		C8DDEEB3280A680E006AE665 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		C8DDEEB5280A685E006AE665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C8DDEEB9280A7A8E006AE665 /* wordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordModel.swift; sourceTree = "<group>"; };
+		C8DDEEBB280A905B006AE665 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +64,12 @@
 		C8DDEE9D280A59A3006AE665 /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
+				C8DDEEB8280A7A6B006AE665 /* Models */,
+				C8DDEEB5280A685E006AE665 /* Info.plist */,
+				C8DDEEB3280A680E006AE665 /* PressStart2P-Regular.ttf */,
 				C8DDEE9E280A59A3006AE665 /* WordleApp.swift */,
 				C8DDEEA0280A59A3006AE665 /* ContentView.swift */,
+				C8DDEEAC280A5F66006AE665 /* View */,
 				C8DDEEA2280A59A7006AE665 /* Assets.xcassets */,
 				C8DDEEA4280A59A7006AE665 /* Preview Content */,
 			);
@@ -65,6 +82,25 @@
 				C8DDEEA5280A59A7006AE665 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8DDEEAC280A5F66006AE665 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8DDEEAD280A5F82006AE665 /* KeyboardView.swift */,
+				C8DDEEAF280A61A2006AE665 /* KeyboardButtonView.swift */,
+				C8DDEEB1280A6445006AE665 /* GameView.swift */,
+				C8DDEEBB280A905B006AE665 /* GuessView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C8DDEEB8280A7A6B006AE665 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8DDEEB9280A7A8E006AE665 /* wordModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DDEEB4280A680E006AE665 /* PressStart2P-Regular.ttf in Resources */,
 				C8DDEEA6280A59A7006AE665 /* Preview Assets.xcassets in Resources */,
 				C8DDEEA3280A59A7006AE665 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DDEEA1280A59A3006AE665 /* ContentView.swift in Sources */,
+				C8DDEEBA280A7A8E006AE665 /* wordModel.swift in Sources */,
+				C8DDEEAE280A5F82006AE665 /* KeyboardView.swift in Sources */,
 				C8DDEE9F280A59A3006AE665 /* WordleApp.swift in Sources */,
+				C8DDEEBC280A905B006AE665 /* GuessView.swift in Sources */,
+				C8DDEEB0280A61A2006AE665 /* KeyboardButtonView.swift in Sources */,
+				C8DDEEB2280A6445006AE665 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +312,7 @@
 				DEVELOPMENT_TEAM = 6662LXK987;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wordle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +342,7 @@
 				DEVELOPMENT_TEAM = 6662LXK987;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wordle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

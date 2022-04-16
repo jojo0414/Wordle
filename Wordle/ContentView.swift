@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var word = wordModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GameView()
+            .environmentObject(word)
     }
 }
 

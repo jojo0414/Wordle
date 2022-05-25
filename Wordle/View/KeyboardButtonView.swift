@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct KeyboardButtonView: View {
-    var character: String
+    var index: Int
     @EnvironmentObject var word: wordModel
     
     var body: some View {
         Button {
-            word.addChar(character: character)
+            word.addChar(character: word.keyboard[index].char)
 //            print(word.gussesArray)
         } label: {
             ZStack{
                 Rectangle()
                     .frame(width: 35, height: 35)
-                    .foregroundColor(.black)
                     .opacity(0.5)
-                Text(character)
+                    .foregroundColor(word.keyboard[index].color)
+                Text(word.keyboard[index].char)
                     .font(.custom("PressStart2P-Regular", size: 30))
                     .foregroundColor(.white)
             }
@@ -32,12 +32,6 @@ struct KeyboardButtonView: View {
 
 struct KeyboardButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack{
-            Image("appBackground")
-                .resizable()
-                .ignoresSafeArea()
-                .opacity(0.8)
-            KeyboardButtonView(character: "P")
-        }
+        ContentView()
     }
 }

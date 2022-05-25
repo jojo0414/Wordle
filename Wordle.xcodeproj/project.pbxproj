@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81BC3EE281D52E6004A44EC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BC3ED281D52E6004A44EC /* ResultView.swift */; };
+		C81BC3F0281E3E07004A44EC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81BC3EF281E3E07004A44EC /* StartView.swift */; };
+		C839146E283A8F47004707E7 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839146D283A8F47004707E7 /* InformationView.swift */; };
+		C8391470283DE0EC004707E7 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839146F283DE0EC004707E7 /* HistoryModel.swift */; };
+		C847EC65283E445E00D533F6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847EC64283E445E00D533F6 /* HistoryView.swift */; };
+		C85C023E282B772100DCF882 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C023D282B772100DCF882 /* SettingView.swift */; };
 		C8DDEE9F280A59A3006AE665 /* WordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEE9E280A59A3006AE665 /* WordleApp.swift */; };
 		C8DDEEA1280A59A3006AE665 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEA0280A59A3006AE665 /* ContentView.swift */; };
 		C8DDEEA3280A59A7006AE665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DDEEA2280A59A7006AE665 /* Assets.xcassets */; };
@@ -17,9 +23,16 @@
 		C8DDEEB4280A680E006AE665 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8DDEEB3280A680E006AE665 /* PressStart2P-Regular.ttf */; };
 		C8DDEEBA280A7A8E006AE665 /* wordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEB9280A7A8E006AE665 /* wordModel.swift */; };
 		C8DDEEBC280A905B006AE665 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEBB280A905B006AE665 /* GuessView.swift */; };
+		C8DDEEBE280AEADB006AE665 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DDEEBD280AEADB006AE665 /* AnswerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C81BC3ED281D52E6004A44EC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		C81BC3EF281E3E07004A44EC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		C839146D283A8F47004707E7 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		C839146F283DE0EC004707E7 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		C847EC64283E445E00D533F6 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		C85C023D282B772100DCF882 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C8DDEE9B280A59A3006AE665 /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DDEE9E280A59A3006AE665 /* WordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleApp.swift; sourceTree = "<group>"; };
 		C8DDEEA0280A59A3006AE665 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +45,7 @@
 		C8DDEEB5280A685E006AE665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C8DDEEB9280A7A8E006AE665 /* wordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordModel.swift; sourceTree = "<group>"; };
 		C8DDEEBB280A905B006AE665 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		C8DDEEBD280AEADB006AE665 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +105,11 @@
 				C8DDEEAF280A61A2006AE665 /* KeyboardButtonView.swift */,
 				C8DDEEB1280A6445006AE665 /* GameView.swift */,
 				C8DDEEBB280A905B006AE665 /* GuessView.swift */,
+				C81BC3ED281D52E6004A44EC /* ResultView.swift */,
+				C81BC3EF281E3E07004A44EC /* StartView.swift */,
+				C85C023D282B772100DCF882 /* SettingView.swift */,
+				C839146D283A8F47004707E7 /* InformationView.swift */,
+				C847EC64283E445E00D533F6 /* HistoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				C8DDEEB9280A7A8E006AE665 /* wordModel.swift */,
+				C8DDEEBD280AEADB006AE665 /* AnswerModel.swift */,
+				C839146F283DE0EC004707E7 /* HistoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,12 +196,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DDEEA1280A59A3006AE665 /* ContentView.swift in Sources */,
+				C81BC3F0281E3E07004A44EC /* StartView.swift in Sources */,
 				C8DDEEBA280A7A8E006AE665 /* wordModel.swift in Sources */,
+				C81BC3EE281D52E6004A44EC /* ResultView.swift in Sources */,
 				C8DDEEAE280A5F82006AE665 /* KeyboardView.swift in Sources */,
 				C8DDEE9F280A59A3006AE665 /* WordleApp.swift in Sources */,
+				C8391470283DE0EC004707E7 /* HistoryModel.swift in Sources */,
+				C847EC65283E445E00D533F6 /* HistoryView.swift in Sources */,
 				C8DDEEBC280A905B006AE665 /* GuessView.swift in Sources */,
+				C8DDEEBE280AEADB006AE665 /* AnswerModel.swift in Sources */,
 				C8DDEEB0280A61A2006AE665 /* KeyboardButtonView.swift in Sources */,
+				C839146E283A8F47004707E7 /* InformationView.swift in Sources */,
 				C8DDEEB2280A6445006AE665 /* GameView.swift in Sources */,
+				C85C023E282B772100DCF882 /* SettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

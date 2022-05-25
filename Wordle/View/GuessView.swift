@@ -9,17 +9,19 @@ import SwiftUI
 
 struct GuessView: View {
     @EnvironmentObject var wordModel: wordModel
+    @EnvironmentObject var answer: answerModel
     
     var body: some View {
         VStack(spacing: 3) {
             ForEach(0..<Int(wordModel.maxGussesNum), id: \.self){y in
                 HStack(spacing: 3){
-                    ForEach(0..<Int(wordModel.maxStringLength), id: \.self){x in
+                    ForEach(0..<Int(wordModel.minStringLength), id: \.self){x in
                         ZStack{
                             Rectangle()
                                 .aspectRatio(1, contentMode: .fit)
                                 .opacity(0.5)
-                            Text(wordModel.gussesArray[y * (wordModel.maxGussesNum - 1) + x])
+                                .foregroundColor(wordModel.gussesArray[y * wordModel.minStringLength + x].color)
+                            Text(wordModel.gussesArray[y *  wordModel.minStringLength + x].guessString)
                                 .font(.custom("PressStart2P-Regular", size: 30))
                                 .foregroundColor(.white)
                         }

@@ -9,25 +9,34 @@ import SwiftUI
 
 struct KeyboardView: View {
     @EnvironmentObject var wordModel: wordModel
-    var keyboardRaw1 = "QWERTYUIOP".map{String($0)}
-    var keyboardRaw2 = "ASDFGHJKL".map{String($0)}
-    var keyboardRaw3 = "ZXCVBNM".map{String($0)}
+    @EnvironmentObject var answerModel: answerModel
+    
+    @State var isInList = false
+    @State var isInputFinish = false
     
     var body: some View {
         VStack(alignment: .center){
             HStack(spacing: 2){
-                ForEach(keyboardRaw1, id: \.self){ item in
-                    KeyboardButtonView(character: item)
+                ForEach(0..<10) { i in
+                    KeyboardButtonView(index: i)
                 }
             }
             HStack(spacing: 2){
-                ForEach(keyboardRaw2, id: \.self){ item in
-                    KeyboardButtonView(character: item)
-                }
+                ForEach(10..<19, content: { i in
+                    KeyboardButtonView(index: i)
+                })
             }
             HStack(spacing: 2){
                 Button {
-                    wordModel.okButton()
+                    wordModel.okButton(answer: answerModel.answerWord, questionList: answerModel.getList())
+                    if wordModel.gameState == guessState.notInList
+                    {
+                        isInList = true
+                    }
+                    if wordModel.gameState == guessState.inputNotFinish
+                    {
+                        isInputFinish = true
+                    }
                 } label: {
                     ZStack{
                         Rectangle()
@@ -40,9 +49,9 @@ struct KeyboardView: View {
                     }
                 }
                 HStack(spacing: 2){
-                    ForEach(keyboardRaw3, id: \.self){item in
-                        KeyboardButtonView(character: item)
-                    }
+                    ForEach(19..<26, content: { i in
+                        KeyboardButtonView(index: i)
+                    })
                 }
                 Button {
                     wordModel.deleteButton()
@@ -59,6 +68,22 @@ struct KeyboardView: View {
                 }
 
             }
+        }
+        .alert("輸入錯誤", isPresented: $isInputFinish) {
+            Button {
+                
+            } label: {
+                Text("OK")
+            }
+
+        }
+        .alert("單字不存在", isPresented: $isInList) {
+            Button {
+                
+            } label: {
+                Text("OK")
+            }
+
         }
     }
 }

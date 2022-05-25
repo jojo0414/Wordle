@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var answer = answerModel()
     @StateObject var word = wordModel()
+    @StateObject var history = HistoryModel()
     
     var body: some View {
-        GameView()
+            StartView()
             .environmentObject(word)
+            .environmentObject(answer)
+            .environmentObject(history)
     }
 }
 

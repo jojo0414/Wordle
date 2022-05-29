@@ -19,11 +19,17 @@ struct InformationView: View {
             VStack{
                 VStack(){
                     InformationTextView1()
+                    Text("")
                     InformationTextView2()
-                        .padding(5)
+                    Text("")
                     InformationTextView3()
                 }
                 .foregroundColor(.white)
+                .scaledToFit()
+                .frame(width: 300, height: 500)
+                
+                
+                ExampleView()
 //                .scaledToFit()
 //                .frame(width: 350, height: 500)
                 
@@ -36,7 +42,7 @@ struct InformationView: View {
 //                .foregroundColor(.white)
 //                .padding()
             }
-            .offset(x: 0, y: -30)
+            .offset(x: 0, y: -50)
         }
     }
 }
@@ -79,6 +85,26 @@ struct InformationTextView3: View{
             Text("像是正確位置正確字母預設是綠色")
             Text("如果覺得這個顏色太「吉利」的承受不住的話")
             Text("可以將顏色改成別的你喜歡的顏色歐～")
+        }
+    }
+}
+
+struct ExampleView: View
+{
+    var body: some View{
+        VStack(alignment: .leading, spacing: 10){
+            Text("Ansswer:")
+                .foregroundColor(.white)
+                .font(.custom("PressStart2P-Regular", size: 20))
+            
+            Text("    PROCESSOR")
+                .foregroundColor(.white)
+                .font(.custom("PressStart2P-Regular", size: 20))
+            
+            Image("examplePicture")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 300)
         }
     }
 }

@@ -37,6 +37,7 @@ struct KeyboardView: View {
                     {
                         isInputFinish = true
                     }
+                    
                 } label: {
                     ZStack{
                         Rectangle()

@@ -119,7 +119,7 @@ class wordModel: ObservableObject{
             {
                 if let index = keyboard.firstIndex(where: {$0.char == gussesArray[tryNum * minStringLength + i].guessString})
                 {
-                    keyboard[index].color = .green
+                    keyboard[index].color = colorType[2]
                 }
                 else
                 {
@@ -180,8 +180,13 @@ class wordModel: ObservableObject{
                 }
             }
         }
-        tryNum += 1
         self.gameState = guessState.partCorrect
+        if tryNum == maxGussesNum - 1
+        {
+            self.isFinish = true
+            return
+        }
+        tryNum += 1
         return
     }
     
